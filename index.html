@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvie dos Asteroides - Jogo 3D</title>
+    <style>
+        body, html { margin: 0; height: 100%; overflow: hidden; }
+        canvas { display: block; }
+        #gameUI {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 1;
+        }
+        #gameUI div {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+    <div id="gameUI">
+        <div>Pontuação: <span id="score">0</span></div>
+        <div>Melhor Pontuação: <span id="highscore">0</span></div>
+        <button id="pauseButton" class="hide">Pausar</button>
+        <button id="resumeButton" class="hide">Continuar</button>
+        <button id="restartButton" class="hide">Reiniciar</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
