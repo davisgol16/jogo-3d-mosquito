@@ -37,6 +37,14 @@ function init() {
     window.addEventListener('keyup', onKeyUp);
     window.addEventListener('touchstart', onTouchStart);
     window.addEventListener('touchmove', onTouchMove);
+    window.addEventListener('touchend', onTouchEnd);
+    window.addEventListener('mouseup', onMouseUp);
+    
+    // Adicionar botões de controle para celular
+    document.getElementById('leftButton').addEventListener('mousedown', () => moveLeft = true);
+    document.getElementById('rightButton').addEventListener('mousedown', () => moveRight = true);
+    document.getElementById('leftButton').addEventListener('mouseup', () => moveLeft = false);
+    document.getElementById('rightButton').addEventListener('mouseup', () => moveRight = false);
     
     animate();
 }
@@ -168,6 +176,17 @@ function onTouchMove(event) {
         moveRight = true;
         moveLeft = false;
     }
+}
+
+function onTouchEnd() {
+    moveLeft = false;
+    moveRight = false;
+}
+
+// Função para quando o mouse é liberado
+function onMouseUp() {
+    moveLeft = false;
+    moveRight = false;
 }
 
 // Inicializar o jogo

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desvie dos Asteroides - Jogo 3D</title>
+    <title>Jogo 3D - Evite os Asteroides</title>
     <style>
-        body, html { margin: 0; height: 100%; overflow: hidden; }
+        body, html { margin: 0; height: 100%; overflow: hidden; background-color: #000; }
         canvas { display: block; }
         #gameUI {
             position: absolute;
@@ -20,6 +20,25 @@
             margin: 5px 0;
         }
         .hide { display: none; }
+
+        /* Estilo dos botões de controle */
+        #controlButtons {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        #controlButtons button {
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +49,12 @@
         <button id="resumeButton" class="hide">Continuar</button>
         <button id="restartButton" class="hide">Reiniciar</button>
     </div>
+
+    <div id="controlButtons">
+        <button id="leftButton">← Esquerda</button>
+        <button id="rightButton">Direita →</button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
